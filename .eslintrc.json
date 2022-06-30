@@ -5,7 +5,6 @@
         "plugin:prettier/recommended",
         "prettier",
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
@@ -21,6 +20,7 @@
         "no-debugger": "off",
         "no-console": 0,
         "class-methods-use-this": "off",
-        "@typescript-eslint/rule-name": "error"
+        "@typescript-eslint/rule-name": "error",
+        "@typescript-eslint/no-explicit-any": 2
     }
 }
