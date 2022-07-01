@@ -1,4 +1,4 @@
-interface ISource {
+export interface ISource {
     id: string;
     name: string;
     description: string;
