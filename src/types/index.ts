@@ -13,7 +13,7 @@ interface IArticleSource {
     name: string;
 }
 
-interface IArticle {
+export interface IArticle {
     source: IArticleSource;
     author: string | null;
     title: string;
