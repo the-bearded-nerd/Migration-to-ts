@@ -33,3 +33,14 @@ footer .copyright a:hover {
 footer .copyright:before {
     content: '©';
 }
+
+.social-git {
+    width: 64px;
+    height: 64px;
+}
+
+.social-rss {
+    width: 64px;
+    height: 64px;
+    fill: white;
+}
