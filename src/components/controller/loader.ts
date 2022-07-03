@@ -1,4 +1,4 @@
-import { Endpoint, Method, Options } from '../../types/index';
+import { Endpoint, Method, Options, ICallback } from '../../types/index';
 
 class Loader {
     baseLink: string;
@@ -19,7 +19,7 @@ class Loader {
             endpoint: Endpoint;
             options: Options;
         },
-        callback = (): void => {
+        callback: ICallback = () => {
             console.error('No callback for GET response');
         }
     ) {
@@ -53,7 +53,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: Method, endpoint: Endpoint, callback: (data: string) => void, options = {}) {
+    load(method: Method, endpoint: Endpoint, callback: ICallback, options = {}) {
         console.log('мы в load');
         console.log(method);
         console.log(endpoint);

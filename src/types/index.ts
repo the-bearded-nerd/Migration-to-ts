@@ -108,16 +108,11 @@ export interface IResponse {
     redirected: false;
 }
 
-/*
-body: (...)
-bodyUsed: true
-headers: Headers {}
-ok: true
-redirected: false
-status: 200
-statusText: ""
-type: "cors"
-url: "https://newsapi.org/v2/sources?apiKey=bebb84186690411999e90d40bd2fb672"
-*/
+interface test extends IArticlesResponseObject, ISourcesResponseObject {}
+
+export interface ICallback {
+    <Type extends test>(data: Type): void;
+}
+
 export type Endpoint = 'sources' | 'everything';
 export type Method = 'GET' | 'POST';
