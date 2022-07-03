@@ -45,6 +45,7 @@ export interface Options {
     apiKey?: string;
     category?: 'business' | 'entertainment' | 'general' | 'health' | 'science' | 'sports' | 'technology';
     language?: 'ar' | 'de' | 'en' | 'es' | 'fr' | 'he' | 'it' | 'nl' | 'no' | 'pt' | 'ru' | 'sv' | 'ud' | 'zh';
+    sources?: string;
     country?:
         | 'ae'
         | 'ar'
