@@ -6,9 +6,6 @@ class Loader {
     constructor(baseLink: string, options: Options) {
         this.baseLink = baseLink;
         this.options = options;
-        console.log('мы в конструкторе');
-        console.log(this.baseLink);
-        console.log(this.options);
     }
 
     getResp(
@@ -27,8 +24,6 @@ class Loader {
     }
 
     errorHandler(res: Response) {
-        console.log('мы в errorHandler');
-        console.log(res);
         if (!res.ok) {
             if (res.status === ErrorCode.unauthorized || res.status === ErrorCode.notFound)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -39,11 +34,7 @@ class Loader {
     }
 
     makeUrl(options: Options, endpoint: Endpoint) {
-        console.log('мы в makeUrl');
-        console.log(options);
-        console.log(endpoint);
         const urlOptions: { [index: string]: string } = { ...this.options, ...options };
-        console.log(urlOptions);
         let url = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key: string) => {
@@ -54,11 +45,6 @@ class Loader {
     }
 
     load(method: Method, endpoint: Endpoint, callback: ICallback, options = {}) {
-        console.log('мы в load');
-        console.log(method);
-        console.log(endpoint);
-        console.log(callback);
-        console.log(options);
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

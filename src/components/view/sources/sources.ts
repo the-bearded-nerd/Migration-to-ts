@@ -5,7 +5,6 @@ class Sources {
     draw(data: ISource[]) {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector('#sourceItemTemp');
-        console.log(sourceItemTemp);
         if (sourceItemTemp) {
             data.forEach((item) => {
                 const sourceClone = (<HTMLTemplateElement>sourceItemTemp).content.cloneNode(true) as Element;
