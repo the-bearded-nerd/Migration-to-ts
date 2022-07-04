@@ -18,6 +18,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    column-gap: 64px;
 }
 footer .copyright {
     font-size: 14px;
