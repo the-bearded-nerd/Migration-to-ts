@@ -45,3 +45,10 @@ footer .copyright:before {
     height: 64px;
     fill: white;
 }
+
+@media only screen and (max-width: 768px) {
+    header {
+        text-align: center;
+        justify-content: center;
+    }
+}
