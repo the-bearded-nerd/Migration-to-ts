@@ -1,4 +1,4 @@
-import { Endpoint, Method, Options, ICallback } from '../../types/index';
+import { Endpoint, Method, Options, ICallback, ErrorCode } from '../../types/index';
 
 class Loader {
     baseLink: string;
@@ -30,7 +30,7 @@ class Loader {
         console.log('мы в errorHandler');
         console.log(res);
         if (!res.ok) {
-            if (res.status === 401 || res.status === 404)
+            if (res.status === ErrorCode.unauthorized || res.status === ErrorCode.notFound)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }

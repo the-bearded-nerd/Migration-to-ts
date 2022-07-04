@@ -116,3 +116,9 @@ export interface ICallback {
 
 export type Endpoint = 'sources' | 'everything';
 export type Method = 'GET' | 'POST';
+
+export enum ErrorCode { // useful way to use error codes, no longer HARDCODE!
+    badRequest = 400,
+    unauthorized = 401,
+    notFound = 404,
+}
